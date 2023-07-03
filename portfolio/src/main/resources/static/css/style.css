@@ -1,0 +1,252 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+
+body {
+  background-image: url("/images/mainbg.jpg");
+  background-size: contain;
+  background-position: center;
+  position: relative;
+  padding:10px;
+}
+header {
+  
+  padding: 40px;
+}
+
+.profile-image {
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.profile-image img {
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+  color: #89cbef;
+  font-size: 48px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+header h2 {
+  color: #89cbef;
+  font-size: 28px;
+  margin-top: 150px;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #888;
+  font-size: 18px;
+  
+}
+
+
+
+
+/*    NAVBAR CSS            */
+.navbar {
+  background-color: #f8f9fa; 
+  padding: 10px 20px; 
+}
+
+.navbar-brand {
+  margin-right: 10px; 
+}
+
+.navbar-brand img {
+  margin-right: 5px; 
+}
+
+.navbar-nav .nav-link {
+  margin-right: 15px;
+  color: #212529; 
+}
+
+.navbar-nav .nav-link:hover {
+  color: #efefef; 
+}
+
+.navbar-toggler {
+  border-color: transparent;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Use a custom SVG icon for the toggler button */
+}
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+#education {
+  margin-top: 50px;
+}
+
+#education {
+	
+  margin-top: 50px;
+  color: #FFFFFF; /* Set the text color to white */
+}
+
+.education-item {
+  margin-bottom: 30px;
+}
+
+.education-item h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.education-date {
+  color: #888888;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.education-item p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#skills {
+  background-image: url("/images/mainbg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff; /* Set text color to white */
+  padding: 50px;
+}
+
+#skills h2 {
+  text-align: center;
+}
+
+#skillsAccordion .card {
+  background-color: rgba(0, 0, 0, 0.7); /* Add transparency to the card background */
+  margin-bottom: 20px;
+}
+
+#skillsAccordion .card-header {
+  background-color: rgba(0, 0, 0, 0.9); /* Add transparency to the card header background */
+  color: #fff; /* Set header text color to white */
+}
+
+#skillsAccordion .card-header button {
+  color: #fff; /* Set button text color to white */
+}
+
+#skillsAccordion .card-body {
+  background-color: rgba(0, 0, 0, 0.8); /* Add transparency to the card body background */
+}
+
+#skillsAccordion .card-body ul {
+  list-style-type: none;
+  padding: 0;
+  color: #fff; /* Set list item text color to white */
+}
+
+#skillsAccordion .card-body ul li {
+  margin-bottom: 10px;
+}
+
+
+#contact {
+  background-color: rgba(0, 0, 0, 0.7); 
+  padding: 50px;
+}
+
+#contact h2 {
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.social-media-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-media-links li {
+  margin-bottom: 10px;
+}
+.social-media-links p {
+  color: #afafaf;
+}
+
+.social-media-links a {
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.social-media-links a:hover {
+  color: #ffd700;
+}
+
+#contact-form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #afafaf;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.gmail-icon {
+  
+  margin-bottom: 20px;
+}
+
+.gmail-icon i {
+  font-size: 48px;
+  color: #db4a39;
+}
+#contact h3 {
+  color: #afafaf;
+}
+
+
+
+
+
+
+
