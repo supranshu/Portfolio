@@ -8,7 +8,8 @@ html {
 
 body {
   background-image: url("/images/mainbg.jpg");
-  background-size: contain;
+  background-repeat: no-repeat;
+  background-size: cover;
   background-position: center;
   position: relative;
   padding:10px;
@@ -243,6 +244,30 @@ button[type="submit"]:hover {
 #contact h3 {
   color: #afafaf;
 }
+
+/* CSS for responsiveness */
+@media screen and (max-width: 768px) {
+  /* Adjust the layout and styling for smaller screens */
+  .social-media-links li {
+    display: inline-block;
+    margin: 10px;
+  }
+  
+  #contact-form .form-group {
+    margin-bottom: 20px;
+  }
+  
+  #contact-form label,
+  #contact-form input,
+  #contact-form textarea {
+    width: 100%;
+  }
+  
+  #contact-form button[type="submit"] {
+    width: 100%;
+  }
+}
+
 
 
 
