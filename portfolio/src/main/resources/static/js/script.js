@@ -1,4 +1,4 @@
-// Smooth scrolling for anchor links
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
@@ -10,8 +10,8 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 	
 document.getElementById('skills-link').addEventListener('click', function(event) {
-  event.preventDefault(); // Prevent default link behavior
-  var skillsSection = document.getElementById('skills'); // Get the skills section
-  skillsSection.scrollIntoView({ behavior: 'smooth' }); // Scroll to the skills section smoothly
+  event.preventDefault();
+  var skillsSection = document.getElementById('skills'); 
+  skillsSection.scrollIntoView({ behavior: 'smooth' }); 
 });
 
