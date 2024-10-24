@@ -1,175 +1,337 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-	<link rel="stylesheet" th:href="@{/css/style.css}" />
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-	
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    
     <title>Supranshu S</title>
-  </head>
-  <body>
-    
-    
-  	<nav class="navbar navbar-expand-lg bg-body-tertiary sticky-navbar">
-  <div class="container-fluid">
-  
-    <a class="navbar-brand" th:href="@{'/'}">
-      <img src="/images/profile.png" alt="Profile" width="30" height="24">
-    </a>
-  
-    <a class="navbar-brand" th:href="@{'/'}" >Supranshu S</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" th:href="@{'/'}" >Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{#skills}">Skills</a>
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div class="loading-animation"></div>
 
-
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" th:href="@{#contact}">Contact Me</a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-	
-  <div class="profile-image">
-    <img src="/images/ProfilePic.jpg" alt="Profile" width="150" height="150">
-  </div>
-<header class="text-center">
-    <h1>Welcome to my Portfolio</h1>
-    
-	  <h2  >About Me</h2>
-	
-    <p class="text-center">Aspiring Java Developer with a keen interest in programming and software development. Currently pursuing a degree in Computer Science with a focus on Java development. Strong foundation in core Java concepts and experience in developing basic applications. Eager to learn and gain practical experience in the field of Java development through internships and other opportunities. Dedicated to continuous learning and improvement to build a successful career in the industry.</p>
-  </header>
-
-
-<section id="education">
-  <h2>Education</h2>
-  <div class="education-item">
-    <h3>High School</h3>
-    <p class="education-date">2019 - 2021</p>
-    <p>R.K Talreja College,Ulhasnagar</p>
-    
-  </div>
-  <div class="education-item">
-    <h3>B.E in Computer Science and Engineering</h3>
-    <p class="education-date">2021 - 2025</p>
-    <p>Terna Engineering College, Navi Mumbai</p>
-    
-    
-  </div>
-</section>
-
-
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="accordion" id="skillsAccordion">
-    <div class="card">
-      <div class="card-header" id="skillsHeading">
-        <h3 class="mb-0">
-          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#skillsCollapse" aria-expanded="true" aria-controls="skillsCollapse">
-            Technical Skills
-          </button>
-        </h3>
-      </div>
-      <div id="skillsCollapse" class="collapse show" aria-labelledby="skillsHeading" data-parent="#skillsAccordion">
-        <div class="card-body">
-          <ul>
-            <li>Programming Languages: Java, JavaScript, C, Python</li>
-            <li>Web Development: HTML, CSS, JavaScript, React, BootStrap, Angular</li>
-            <li>Database: MySQL, Oracle</li>
-            <li>Frameworks: Spring,Spring Boot, Hibernate</li>
-            <li>Version Control: Git, GitHub</li>
-    		<li>Build Tools: Maven</li>
-          </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/">
+                <img src="/images/profile.png" alt="Profile" width="30" height="24">
+                <span class="ms-2">Supranshu S</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">Skills</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
-      </div>
-    </div>
-    
-      
-    </div>
+    </nav>
 
+    <!-- Header Section -->
+    <section id="home">
+        <div class="profile-image">
+            <img src="/images/ProfilePic.jpg" alt="Profile" width="150" height="150">
+        </div>
+        <header class="text-center">
+            <h1 class="animate-title">Welcome to my Portfolio</h1>
+            <h2 class="animate-subtitle">About Me</h2>
+            <p class="animate-text">Aspiring Java Developer with a keen interest in programming and software development. Currently pursuing a degree in Computer Science with a focus on Java development. Strong foundation in core Java concepts and experience in developing basic applications. Eager to learn and gain practical experience in the field of Java development through internships and other opportunities. Dedicated to continuous learning and improvement to build a successful career in the industry.</p>
+        </header>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-item">
+                    <h3>High School</h3>
+                    <p class="education-date">2019 - 2021</p>
+                    <p>R.K Talreja College, Ulhasnagar</p>
+                </div>
+                <div class="education-item">
+                    <h3>B.E in Computer Science and Engineering</h3>
+                    <p class="education-date">2021 - 2025</p>
+                    <p>Terna Engineering College, Navi Mumbai</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+<section id="skills" class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+            <!-- Programming Languages -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <h3>Programming Languages</h3>
+                <ul>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                    <li>C</li>
+                </ul>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-laptop-code"></i>
+                </div>
+                <h3>Web Development</h3>
+                <ul>
+                    <li>HTML5 & CSS3</li>
+                    <li>React</li>
+                    <li>Bootstrap</li>
+                    <li>Angular</li>
+                </ul>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>Databases</h3>
+                <ul>
+                    <li>MySQL</li>
+                    <li>Oracle</li>
+                </ul>
+            </div>
+
+            <!-- Frameworks -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Frameworks</h3>
+                <ul>
+                    <li>Spring</li>
+                    <li>Spring Boot</li>
+                    <li>Hibernate</li>
+                </ul>
+            </div>
+
+            <!-- Version Control -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <h3>Version Control</h3>
+                <ul>
+                    <li>Git</li>
+                    <li>GitHub</li>
+                </ul>
+            </div>
+
+            <!-- Build Tools -->
+            <div class="skill-card">
+                <div class="skill-icon">
+                    <i class="fas fa-tools"></i>
+                </div>
+                <h3>Build Tools</h3>
+                <ul>
+                    <li>Maven</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </section>
 
+<!-- Projects Section -->
+<section id="projects" class="section-padding">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="/images/VitalSync.webp" alt="Project 1" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Vital Sync</h3>
+                    <p class="project-description">Chronic Disease Management App- Build an app for individuals with chronic health conditions (e.g., diabetes, hypertension, asthma) to track symptoms, medication adherence, vital signs, and appointments, and receive personalized health management tips and reminders.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/supranshu/AlphaByte" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code</span>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
 
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="/images/evease.webp" alt="Project 2" class="project-image">
+                <div class="project-content">
+                    <h3 class="project-title">Event Ease</h3>
+                    <p class="project-description">EventEase is a web application for managing events and approvals within a college setting. It allows users to create, manage, and approve events through a user-friendly interface.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Java</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                        <span class="tech-tag">MySQL</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/supranshu/EventEase-Agnethon" class="project-link" target="_blank">
+                            <i class="fab fa-github"></i>
+                            <span>Code</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-
-<section id="contact">
-  <h2>Contact</h2>
-  <ul class="social-media-links text-center">
-    <li><p>Connect with me on LinkedIn!!</p></li>
-    <li><a href="https://www.linkedin.com/in/supranshu-singh-ba33b5240/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a></li>
-    <li><p>Follow me on Instagam!!</p></li>
-    <li><a href="https://www.instagram.com/supranshu_s/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
-    <li><p>Here's my GitHub ID for all of my projects!!</p></li>
-    <li><a href="https://github.com/supranshu" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a></li>
-    <!-- Add more social media links as needed -->
-  </ul>
-  
-  <form id="contact-form" method="post" action="/send-email">
-    <div class="form-group">
-      <div class="gmail-icon">
-        <i class="fab fa-google"></i>
-      </div>
-      <h3>Contact me through E-Mail</h3>
-      
-      <div class="form-group">
-        <label for="to">Email:</label>
-        <input type="email" id="to" name="to" required>
-      </div>
-      
-      <label for="subject">Subject:</label>
-      <input type="text" id="subject" name="subject" required>
+            <!-- Project 3 -->
+            <div class="project-card project-container">
+                <img src="/images/scc.png" alt="Project 3" class="project-image sanjay">
+                <div class="project-content">
+                    <h3 class="project-title">Portfolio Websites from my Web Developer Internship</h3>
+                    <p class="project-description">I had a 1 month web developer internship at Sanjay Carrying Corporation, where i built 2 websites for their 2 companies namely Sanjay Carrying Corporation and ShivShakti Solar Eneargy</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Angular</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.sanjaycarrying.in/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Sanjay Carrying Corporation</span>
+                        </a>
+                        <a href="https://www.shivshaktisolareneargy.in/" class="project-link" target="_blank">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>ShivShakti Solar Eneargy</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    
-    <div class="form-group">
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" required></textarea>
-    </div>
-    <button type="submit">Send</button>
-  </form>
 </section>
 
+    <!-- Contact Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Contact</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="social-links">
+                        <h3>Connect With Me</h3>
+                        <ul class="social-media-links">
+                            <li>
+                                <a href="https://www.linkedin.com/in/supranshu-singh-ba33b5240/" target="_blank">
+                                    <i class="fab fa-linkedin"></i>
+                                    <span>LinkedIn</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/supranshu_s/" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                    <span>Instagram</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/supranshu" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GitHub</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h3><i class="far fa-envelope"></i> Send Me a Message</h3>
+                        <form id="contact-form" method="post" action="/send-email">
+                            <div class="form-group">
+                                <label for="to">Email</label>
+                                <input type="email" id="to" name="to" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">
+                                <span>Send Message</span>
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Scroll to Top Button -->
+    <div class="scroll-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Scroll to Top Button Functionality
+        const scrollBtn = document.querySelector('.scroll-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                scrollBtn.classList.add('visible');
+            } else {
+                scrollBtn.classList.remove('visible');
+            }
+        });
 
+        scrollBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
 
+        // Remove loading animation after page load
+        window.addEventListener('load', () => {
+            document.querySelector('.loading-animation').style.display = 'none';
+        });
 
-
-
-
-
-
-
-
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    -->
-  </body>
-  <script src="/js/script.js"></script>
-  
+        // Smooth scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
 </html>
